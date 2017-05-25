@@ -29,7 +29,7 @@ public class ReenterLockDemo implements Runnable {
         Thread t2 = new Thread(demo);
         t1.start();
         t2.start();
-        t2.join();
+        t1.join();
         t2.join();
         System.out.println(j);
     }

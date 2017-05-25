@@ -36,8 +36,9 @@ public class CountTask extends RecursiveTask<Long> {
             ArrayList<CountTask> subTasks = new ArrayList<>();
             long pos = start;
             for (int i = 0; i < 100; i++) {
+                //每一个task中最后一个值
                 long lastOne = pos + step;
-                if (lastOne < end) {
+                if (lastOne > end) {
                     lastOne = end;
                 }
                 CountTask subTask = new CountTask(pos, lastOne);

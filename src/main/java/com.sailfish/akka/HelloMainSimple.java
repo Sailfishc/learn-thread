@@ -2,6 +2,8 @@ package com.sailfish.akka;
 
 import com.typesafe.config.ConfigFactory;
 
+import sun.jvm.hotspot.HelloWorld;
+
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;

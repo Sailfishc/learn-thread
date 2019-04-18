@@ -15,6 +15,7 @@ public class ReenterLockCondition implements Runnable {
     public void run() {
 
         try {
+            System.out.println("Thread coming ...");
             lock.lock();
             condition.await();
             System.out.println("Thread is going on");
@@ -32,6 +33,7 @@ public class ReenterLockCondition implements Runnable {
         Thread.sleep(2000);
         //通知线程t1继续执行
         lock.lock();
+        System.out.println("singal thread ... ");
         condition.signal();
         lock.unlock();
     }
